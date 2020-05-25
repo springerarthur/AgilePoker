@@ -1,0 +1,151 @@
+﻿body {
+  background: #edeff1; }
+
+#blazor-error-ui {
+  background: lightyellow;
+  bottom: 0;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+  display: none;
+  left: 0;
+  padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; }
+  #blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem; }
+
+header {
+  background-color: #2c3e50; }
+
+button.btn-primary {
+  background: #1abc9c;
+  border-color: #148f77; }
+  button.btn-primary:disabled {
+    background: #1abc9c;
+    border-color: #148f77; }
+  button.btn-primary:hover, button.btn-primary:active {
+    background: #148f77 !important;
+    border-color: #0d6252 !important; }
+  button.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 98, 82, 0.5) !important; }
+
+.game .card-deck {
+  background-color: #34495e; }
+
+.game .card-header {
+  background-color: #2c3e50;
+  color: white; }
+
+.game .card-body {
+  background-color: #34495e; }
+
+.start-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  /* TABS */
+  /* FORM TYPOGRAPHY*/
+  /* OTHERS */ }
+  .start-page #formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+    text-align: center; }
+  .start-page #settings {
+    background-color: #f6f6f6;
+    border-top: 1px solid #7dcbbc;
+    margin-top: 30px;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px; }
+  .start-page h2.inactive {
+    color: #cccccc; }
+  .start-page h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #1abc9c; }
+  .start-page input[type=button], .start-page input[type=submit], .start-page input[type=reset] {
+    background-color: #1abc9c;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 5px 20px 0 rgba(26, 188, 156, 0.35);
+    box-shadow: 0 5px 20px 0 rgba(26, 188, 156, 0.35);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 5px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .start-page input[type=button]:hover, .start-page input[type=submit]:hover, .start-page input[type=reset]:hover {
+    background-color: #148f77; }
+  .start-page input[type=text] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px; }
+  .start-page input[type=text]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #1abc9c; }
+  .start-page input[type=text]:placeholder {
+    color: #cccccc; }
+  .start-page .underlineHover:hover {
+    color: #0d0d0d; }
+  .start-page .underlineHover:hover:after {
+    width: 100%; }
+  .start-page *:focus {
+    outline: none; }
+  .start-page #icon {
+    width: 60%; }
+
+.ap-card {
+  font-size: 30px;
+  height: 130px;
+  width: 80px;
+  line-height: 130px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #1abc9c;
+  color: #2c3e50;
+  box-shadow: 2px 2px 5px 0px #333;
+  user-select: none; }
+  .ap-card.selectable:hover {
+    cursor: pointer;
+    background-color: #148f77; }
+
+.card-deck .ap-card:not(.selectable),
+.community-cards .ap-card:not(.selected) {
+  opacity: 0.5; }

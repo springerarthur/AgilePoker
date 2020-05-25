@@ -1,0 +1,22 @@
+﻿.ap-card {
+    font-size: 30px;
+    height: 130px;
+    width: 80px;
+    line-height: 130px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #1abc9c;
+    color: #2c3e50;
+    box-shadow: 2px 2px 5px 0px #333;
+    user-select: none;
+
+    &.selectable:hover {
+        cursor: pointer;
+        background-color: $color-primary-hover;
+    }
+}
+
+.card-deck .ap-card:not(.selectable),
+.community-cards .ap-card:not(.selected) {
+    opacity: 0.5;
+}

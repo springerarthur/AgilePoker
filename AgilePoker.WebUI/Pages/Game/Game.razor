@@ -1,0 +1,46 @@
+﻿@page "/play"
+@page "/play/{PlayerId:int}"
+@inherits GameBase
+
+@if (Game.CurrentPlayer == null)
+{
+    <h2>Starting the game...</h2>
+}
+else
+{
+<div class="game">
+    @if (!Game.CurrentPlayer.Guest)
+    {
+        <div class="card-deck row justify-content-center px-4 pt-4 pb-2">
+            @foreach (var card in Game.Cards)
+            {
+                <div class="column mx-2">
+                    <Card @key="@card" Card="@card" Locked="@Game.Revealed" OnSelected="CardSelectedAsync" />
+                </div>
+            }
+        </div>
+    }
+    @if (Game.Revealed)
+    {
+        <div class="row justify-content-center p-3">
+            <button type="button" class="btn btn-primary btn-lg" @onclick="RestartGameClickedAsync">Restart</button>
+        </div>
+    }
+    <div class="community-cards row justify-content-center p-3">
+        @foreach (var player in Game.Players.Where(p => !p.Guest))
+        {
+            <div class="card text-center">
+                <div class="card-header">
+                    @player.Name
+                </div>
+                <div class="card-body justify-content-center">
+                    <Card @key="@player" FacedDown="!Game.Revealed" Card="@player.SelectedCard" Locked="true" />
+                    <button @onclick="() => KickPlayerClickedAsync(player)" class="btn btn-outline-danger">
+                        Kick
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+}

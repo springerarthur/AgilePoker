@@ -1,0 +1,9 @@
+﻿@inherits NavMenuBase
+
+<header class="navbar navbar-dark">
+    <a class="navbar-brand" href="">AgilePoker</a>
+    @if (NavigationManager.Uri.Contains("/play/"))
+    {
+        <button class="btn btn-outline-danger my-2 my-sm-0" @onclick="OnLeaveClickedAsync">Leave</button>
+    }
+</header>

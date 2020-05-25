@@ -1,0 +1,17 @@
+﻿@inherits CardBase
+
+    <div class="ap-card rounded mx-auto mb-3
+        @(Card.Selected ? "selected" : string.Empty)
+        @(!Locked ? "selectable" : string.Empty)"
+        @onclick="SelectAsync">
+        <div class="ap-card-inner">
+            @if (FacedDown)
+            {
+                @("?");
+            }
+            else
+            {
+                @(Card.Value ?? "?")
+            }
+        </div>
+    </div>

@@ -1,0 +1,22 @@
+﻿@page "/"
+@inherits StartBase
+
+<div class="start-page">
+    <div id="formContent">
+        <h3>Join the game</h3>
+
+        <EditForm Model="Player" OnValidSubmit="@JoinGame">
+            <DataAnnotationsValidator />
+
+            <ValidationMessage For="() => Player.Name" />
+            <InputText type="text" id="name" placeholder="Name" @bind-Value="Player.Name" />
+
+            <div id="settings">
+                <InputCheckbox @bind-Value="Player.Guest" id="guest" />
+                <label for="guest">Guest</label>
+                <br />
+                <input type="submit" value="Join the game">
+            </div>
+        </EditForm>
+    </div>  
+</div>
